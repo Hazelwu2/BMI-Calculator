@@ -61,6 +61,17 @@ p
 section.bmi-section
   padding: 80px 0
   background: $background
+  @media screen and (max-width: 768px)
+    padding: 40px
+    img
+      width: 50px
+      height: 50px
+    #sendData
+      width: 100px
+      height: 100px
+      font-size: 1rem
+      .circular
+        left: 60px
   .row
     +flex($default: space-around)
   label
@@ -97,6 +108,8 @@ section.bmi-section
       transform: rotate(90deg)
   small
     font-size: 14px
+  .bmi
+    display: none
   &.green
     +colorBtn($colorGreen)
     .circular
@@ -121,6 +134,15 @@ section.bmi-list
   +flex($direction: column)
   background: #F4F3F4
   padding: 40px 0
+  @media screen and (max-width: 768px)
+    .status
+      margin-top: 1rem
+    .time
+      text-align: center
+      margin-top: 1rem
+      color: skyblue
+    .cross:after
+      left: 15px
   h1
     font-size: 24px
     color: $background
@@ -135,6 +157,14 @@ section.bmi-list
     border-left: 7px solid $colorGreen
     margin-bottom: 10px
     transition: all .5s
+    @media screen and (max-width: 768px)
+      flex-wrap: wrap
+      width: 100%
+      .status
+        margin-bottom: 1rem
+      small, .status
+        display: block
+        width: 100%
     &.green
       border-left: 7px solid $colorGreen
     &.orange

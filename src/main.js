@@ -56,6 +56,7 @@ function addList() {
   }
   document.querySelector('.lookResult').textContent = '';
   document.querySelector('.value').textContent = BMI;
+  document.querySelector('.bmi').display = 'block';
   document.querySelector('.bmi').textContent = 'BMI';
   var BMIdata = {
     status: status,
@@ -77,11 +78,11 @@ function updateList(items) {
 
   for (let i = 0; i < itemLen; i++) {
     str += `<li class="${items[i].statusBar}">
-      <p class="ml-2 mr-4">${items[i].status}</p>
+      <p class="ml-2 mr-4 status">${items[i].status}</p>
       <small>BMI</small><p>${items[i].BMI}</p>
       <small>weight</small><p>${items[i].weight}kg</p>
       <small>height</small><p>${items[i].height}cm</p>
-      <small>${items[i].time}</small>
+      <small class="time">${items[i].time}</small>
       <span class="cross" data-index="${i}"></span>
     </li>`;
   }
