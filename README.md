@@ -1,7 +1,8 @@
 ## BMI Calculator 計算機
 Author： Hazel
-### [Demo網址](https://hazelwu2.github.io/BMI-Calculator/)
+![Screen Shot](https://github.com/Hazelwu2/BMI-Calculator/blob/master/screenShot.png?raw=true)
 
+### [點擊我觀看 Demo](https://hazelwu2.github.io/BMI-Calculator/)
 ### 功能
 1. 利用 localStorage 儲存數值，重新整理後數值不會遺失。
 2. 點擊 X 將 BMI 值資料刪除。
