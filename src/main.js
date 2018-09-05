@@ -33,11 +33,11 @@ function addList() {
     status = '過輕';
     statusBar = 'blue';
     Btn.setAttribute('class', statusBar);
-  } else if (18.5 <= BMI && BMI <= 24) {
+  } else if (18.5 <= BMI && BMI < 24) {
     status = '理想';
     statusBar = 'green';
     Btn.setAttribute('class', statusBar);
-  } else if (24 >= BMI && BMI <= 27) {
+  } else if (24 <= BMI && BMI <= 27) {
     status = '過重';
     statusBar = 'orange';
     Btn.setAttribute('class', statusBar);
