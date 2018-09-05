@@ -18,6 +18,29 @@ $colorRed: #FF1200;
   flex-direction: $direction
   justify-content: $default
   align-items: center
+@mixin colorBtn($bgc)
+  background-color: $background
+  border: 6px solid $bgc
+  color: $bgc
+  border-radius: 50%
+  width: 120px
+  height: 120px
+@mixin colorCirculator($bgc)
+  position: absolute
+  left: 80px
+  bottom: 0
+  background-image: url('https://github.com/Jimmywei01/Pratice/blob/master/icons_loop.png?raw=true')
+  background-position: center
+  background-repeat: no-repeat
+  background-color: $bgc
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  &:hover
+    background-color: darken($bgc, 10%)
+
+
+
 *
   box-sizing: border-box
   margin: 0
@@ -52,17 +75,45 @@ section.bmi-section
     border-radius: 5px
     background: $background
     &:focus
-  #sendData
-    border-radius: 50%
-    width: 120px
-    height: 120px
-    background: $primary
-    border: none
-    font-size: 24px
-    line-height: 25px
-    &:focus
       outline: none
-
+#sendData
+  border-radius: 50%
+  width: 120px
+  height: 120px
+  background: $primary
+  border: none
+  font-size: 24px
+  line-height: 25px
+  transition: all .5s
+  &:focus
+    outline: none
+  &:hover
+    transform: translateX(-10px)
+    background: darken($colorYellow, 15%)
+    .circular
+      transform: rotate(90deg)
+  small
+    font-size: 14px
+  &.green
+    +colorBtn($colorGreen)
+    .circular
+      +colorCirculator($colorGreen)
+  &.red
+    +colorBtn($colorRed)
+    .circular
+      +colorCirculator($colorRed)
+  &.blue
+    +colorBtn($colorBlue)
+    .circular
+      +colorCirculator($colorBlue)
+  &.orange
+    +colorBtn($colorOrange)
+    .circular
+      +colorCirculator($colorOrange)
+  &.orange2
+    +colorBtn($colorOrange2)
+    .circular
+      +colorCirculator($colorOrange2)
 section.bmi-list
   +flex($direction: column)
   background: #F4F3F4
@@ -80,6 +131,7 @@ section.bmi-list
     background-color: $white
     border-left: 7px solid $colorGreen
     margin-bottom: 10px
+    transition: all .5s
     &.green
       border-left: 7px solid $colorGreen
     &.orange
@@ -92,6 +144,7 @@ section.bmi-list
       border-left: 7px solid $colorRed
     &:hover
       box-shadow: 4px 3px 1px 0px #e7e7e7
+      transform: translateX(-15px)
 
 small
   display: inline-flex

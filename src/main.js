@@ -54,6 +54,9 @@ function addList() {
     statusBar = 'red';
     Btn.setAttribute('class', statusBar);
   }
+  document.querySelector('.lookResult').textContent = '';
+  document.querySelector('.value').textContent = BMI;
+  document.querySelector('.bmi').textContent = 'BMI';
   var BMIdata = {
     status: status,
     statusBar: statusBar,
