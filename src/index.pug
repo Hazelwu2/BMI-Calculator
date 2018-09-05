@@ -21,9 +21,9 @@ html(lang="en")
               img(src="https://github.com/Hazelwu2/BMI-Calculator/blob/master/assets/BMICLogo.png?raw=true", alt="BMICLogo")
             .col.mb-5
               label(for="height") 身高 cm
-              input(type="text" name="height" id="bmiHeight" placeholder="請輸入身高" maxlength="3" required)
+              input(type="number" name="height" id="bmiHeight" placeholder="請輸入身高" maxlength="3" required)
               label(for="weight") 體重 kg
-              input(type="text" name="weight" id="bmiWeight" placeholder="請輸入體重" maxlength="4" required)
+              input(type="number" name="weight" id="bmiWeight" placeholder="請輸入體重" maxlength="4" required)
             .col
               button(type="submit" id="sendData") 
                 .lookResult 看結果
