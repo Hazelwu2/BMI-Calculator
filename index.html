@@ -11,5 +11,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main class="bmi-page">
+      <section class="bmi-section">
+        <div class="container">
+          <div class="row text-center">
+            <div class="col"><img src="/assets/BMICLogo.png" alt="BMICLogo"/></div>
+            <div class="col mb-5">
+              <label for="height">身高 cm</label>
+              <input type="text" name="height" id="bmiHeight" placeholder="請輸入身高" maxlength="3" required="required"/>
+              <label for="weight">體重 kg</label>
+              <input type="text" name="weight" id="bmiWeight" placeholder="請輸入體重" maxlength="4" required="required"/>
+            </div>
+            <div class="col">
+              <button type="submit" id="sendData">看結果</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bmi-list">
+        <h1>BMI 紀錄</h1>
+        <ul class="list"></ul>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="justify-content-center text-center"><img src="https://github.com/Jimmywei01/Pratice/blob/master/BMI2.JPG?raw=true" alt="BMI-Logo"/></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="main.js"></script>
+  </body>
 </html>

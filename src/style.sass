@@ -1,0 +1,126 @@
+$background: #424242;
+$primary: #FAD377;
+$white: white;
+
+$colorGray: #424242;
+$colorYellow: #FFD366;
+$colorBlue: #31BAF9;
+$colorGreen: #86D73F;
+$colorOrange: #FF982D;
+$colorOrange2: #FF6C02;
+$colorRed: #FF1200;
+
+@mixin img($width, $height)
+  width: $width + px
+  height: $height + px
+@mixin flex($default: center, $direction: row)
+  display: flex
+  flex-direction: $direction
+  justify-content: $default
+  align-items: center
+*
+  box-sizing: border-box
+  margin: 0
+  font-family: Microsoft JhengHei, '微軟正黑體'
+  &:focus
+    outline: none
+    border: 2px solid lighten($colorYellow, 10%)
+html, body
+  width: 100%
+  height: 100%
+body
+  background: $white
+p
+  margin: 0
+
+
+
+section.bmi-section
+  padding: 80px 0
+  background: $background
+  .row
+    +flex($default: space-around)
+  label
+    color: $primary
+    font-size: 18px
+    line-height: 21px
+    display: block
+    margin: 1rem 0
+  #bmiHeight, #bmiWeight
+    border: 2px solid $primary
+    padding: 6px 12px
+    border-radius: 5px
+    background: $background
+    &:focus
+  #sendData
+    border-radius: 50%
+    width: 120px
+    height: 120px
+    background: $primary
+    border: none
+    font-size: 24px
+    line-height: 25px
+    &:focus
+      outline: none
+
+section.bmi-list
+  +flex($direction: column)
+  background: #F4F3F4
+  padding: 40px 0
+  h1
+    font-size: 24px
+    color: $background
+    text-align: center
+.list
+  padding: 2rem
+  display: flex
+  flex-direction: column-reverse
+  li
+    +flex
+    background-color: $white
+    border-left: 7px solid $colorGreen
+    margin-bottom: 10px
+    &.green
+      border-left: 7px solid $colorGreen
+    &.orange
+      border-left: 7px solid $colorOrange
+    &.orange2
+      border-left: 7px solid $colorOrange2
+    &.blue
+      border-left: 7px solid $colorBlue
+    &.red
+      border-left: 7px solid $colorRed
+    &:hover
+      box-shadow: 4px 3px 1px 0px #e7e7e7
+
+small
+  display: inline-flex
+  padding: 0 1rem
+
+.cross
+  position: relative
+  cursor: pointer
+  width: 60px
+  height: 60px
+  &:after
+    color: $background
+    content: "\D7"
+    font-size: 1.6rem
+    position: absolute
+    top: 8px
+    bottom: 0
+    left: 0
+    right: 0
+
+footer
+  +flex
+  bottom: 0
+  background: $colorYellow
+  height: 90px
+  img
+    +img(55, 55)
+#goTop
+  position: absolute
+  bottom: 1rem
+  right: 1rem
+  cursor: pointer
